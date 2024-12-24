@@ -1,4 +1,4 @@
-export const myNameLogo = "<Garbo/>";
+export const myNameLogo = "<Garbo's/>";
 
 export const menuItems = [
   { label: "Sobre", href: "#sobre" },
