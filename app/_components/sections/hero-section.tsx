@@ -1,6 +1,6 @@
 import { Github, Linkedin, MapPin } from "lucide-react";
 import Image from "next/image";
-import StatusIndicator from "./status-indicator";
+import StatusIndicator from "../status-indicator";
 
 const HeroSection = () => {
   return (
