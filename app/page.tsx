@@ -1,54 +1,68 @@
-import { Github, Linkedin, MapPin } from "lucide-react";
 import Image from "next/image";
-import StatusIndicator from "./_components/status-indicator";
+import HeroSection from "./_components/hero-section";
+import { Badge } from "./_components/ui/badge";
 
 const Home = () => {
   return (
     <>
-      <section className="container mx-auto flex h-screen flex-col items-center justify-center px-4">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-4">
-          <div className="order-2 space-y-12 lg:order-1">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-semibold leading-relaxed lg:leading-relaxed xl:text-4xl xl:font-bold 2xl:text-5xl 2xl:leading-loose">
-                Olá, Eu sou o Garba!
-              </h1>
-              <p className="text-sm lg:text-base">
-                Sou desenvolvedor full stack com um ano de experiência e
-                estudante de Ciência da Computação no quinto semestre. Foco em
-                criar experiências digitais excepcionais que são rápidas,
-                acessíveis, atraentes e responsivas. Sou apaixonado pelo
-                desenvolvimento de aplicações web e estou sempre aprendendo e
-                aprimorando minhas habilidades.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <MapPin size={24} />
-                <p>Taubaté - SP</p>
-              </div>
-              <div className="ml-1">
-                <StatusIndicator />
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.linkedin.com/in/paulo-alexgarba/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin />
-              </a>
-              <a
-                href="https://github.com/paulogarbo"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github />
-              </a>
-            </div>
+      <HeroSection />
+
+      <section className="bg-muted py-16">
+        <div className="container mx-auto px-4">
+          <div className="mb-12 flex justify-center">
+            <Badge variant={"portfolio"}>Sobre</Badge>
           </div>
-          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <Image src={"/person.png"} alt="Garba" width={700} height={700} />
+
+          <div className="grid gap-12 xl:grid-cols-2">
+            <div className="relative flex items-center justify-center">
+              <div className="relative w-full max-w-[430px]">
+                <div className="absolute right-8 top-8 h-full w-full bg-background" />
+                <div className="relative">
+                  <Image
+                    src={"/foto.jpg"}
+                    alt="foto de perfil"
+                    width={380}
+                    height={480}
+                    className="relative w-full border-[10px] border-muted object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <h2 className="text-light-900 dark:text-dark-900 text-2xl font-bold md:text-3xl">
+                Curioso sobre mim? 🤔
+              </h2>
+
+              <div className="flex flex-col gap-4">
+                <p>
+                  Sou apaixonado pelo desenvolvimento de aplicações web e estou
+                  sempre aprendendo e aprimorando minhas habilidades. Sou
+                  especialista em JavaScript, TypeScript, React, Next.js e
+                  Node.js.
+                </p>
+                <p>
+                  Minha jornada profissional como desenvolvedor começou em 2022,
+                  quando iniciei meus estudos sobre desenvolvimento de jogos.
+                  Sempre fui um fã de jogos e, nesse ano, descobri que um dos
+                  meus favoritos, Bioshock, foi desenvolvido na Unreal Engine.
+                  Isso me deu a direção de onde começar a desenvolver jogos.
+                  Comecei a estudar Blueprints, uma &quot;linguagem de
+                  programação&quot; visual da Unreal Engine, dando meus
+                  primeiros passos no mundo da programação.
+                </p>
+                <p>
+                  No início de 2023, entrei na faculdade de Ciência da
+                  Computação e comecei a estudar a linguagem de programação C, o
+                  que me fez ter certeza de que era essa a área que eu queria
+                  seguir. A partir daí, comecei a explorar o desenvolvimento
+                  web, onde conheci o trio do Front-end: HTML, CSS e JavaScript.
+                  Estudei sobre desenvolvimento de aplicações web e aprendi
+                  sobre React, Next.js e TypeScript, o que me levou ao ponto em
+                  que estou atualmente.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
