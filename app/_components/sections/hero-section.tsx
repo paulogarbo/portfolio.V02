@@ -1,6 +1,12 @@
 import { Github, Linkedin, MapPin } from "lucide-react";
 import Image from "next/image";
 import StatusIndicator from "../status-indicator";
+import { Button } from "../ui/button";
+
+const socialLinks = [
+  { href: "https://www.linkedin.com/in/paulo-alexgarba/", icon: Linkedin },
+  { href: "https://github.com/paulogarbo", icon: Github },
+];
 
 const HeroSection = () => {
   return (
@@ -32,21 +38,19 @@ const HeroSection = () => {
               <StatusIndicator />
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.linkedin.com/in/paulo-alexgarba/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Linkedin />
-            </a>
-            <a
-              href="https://github.com/paulogarbo"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github />
-            </a>
+          <div className="flex items-center gap-2">
+            {socialLinks.map(({ href, icon: Icon }) => (
+              <Button
+                key={href}
+                variant="outline"
+                className="h-11 [&_svg]:size-5 [&_svg]:shrink-0"
+                asChild
+              >
+                <a href={href} target="_blank" rel="noreferrer">
+                  <Icon strokeWidth={1.5} />
+                </a>
+              </Button>
+            ))}
           </div>
         </div>
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
