@@ -3,7 +3,7 @@ import { Badge } from "../ui/badge";
 
 const AboutSection = () => {
   return (
-    <section className="bg-muted py-20">
+    <section id="about-section" className="bg-muted py-20">
       <div className="container mx-auto px-4">
         <div className="mb-12 flex justify-center">
           <Badge variant={"portfolio"}>Sobre</Badge>

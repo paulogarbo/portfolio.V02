@@ -4,7 +4,10 @@ import StatusIndicator from "../status-indicator";
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto flex h-[calc(100vh-88px)] min-h-[calc(100vh-88px)] flex-col items-center justify-center px-4">
+    <section
+      id="hero-section"
+      className="container mx-auto flex h-[calc(100vh-88px)] min-h-[calc(100vh-88px)] flex-col items-center justify-center px-4"
+    >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-4">
         <div className="order-2 space-y-12 lg:order-1">
           <div className="space-y-2">

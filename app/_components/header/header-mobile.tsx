@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
 import {
@@ -11,6 +13,8 @@ import {
 import { menuItems, myNameLogo } from "./constants";
 import { ModeToggle } from "../mode-toggle";
 import { DownloadButton } from "../download-button";
+// import Link from "next/link";
+import { Link } from "react-scroll";
 
 const HeaderMobile = () => {
   return (
@@ -23,18 +27,26 @@ const HeaderMobile = () => {
         </SheetTrigger>
         <SheetContent side={"right"} className="flex flex-col gap-3">
           <SheetHeader className="border-b border-border pb-3">
-            <SheetTitle>{myNameLogo}</SheetTitle>
+            <Link to="hero-section" smooth={true} duration={500}>
+              <SheetTitle>{myNameLogo}</SheetTitle>
+            </Link>
           </SheetHeader>
 
           <div className="flex flex-col gap-1">
             {menuItems.map((item) => (
-              <Button
+              <Link
                 key={item.label}
-                variant={"link"}
-                className="justify-start text-left font-medium"
+                to={item.href}
+                smooth={true}
+                duration={500}
               >
-                {item.label}
-              </Button>
+                <Button
+                  variant={"link"}
+                  className="justify-start text-left font-medium"
+                >
+                  {item.label}
+                </Button>
+              </Link>
             ))}
           </div>
 
