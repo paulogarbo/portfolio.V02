@@ -50,7 +50,7 @@ const HeaderMobile = () => {
             ))}
           </div>
 
-          <SheetFooter className="flex flex-col border-t border-border pt-3">
+          <SheetFooter className="flex flex-row border-t border-border pt-3 max-md:gap-2">
             <ModeToggle />
             <DownloadButton
               href="./Currículo.pdf"
