@@ -1,12 +1,8 @@
 import Image from "next/image";
-import StatusIndicator from "../status-indicator";
-import { Github, Linkedin, MapPin } from "lucide-react";
-import { Button } from "../ui/button";
-
-const socialLinks = [
-  { href: "https://www.linkedin.com/in/paulo-alexgarba/", icon: Linkedin },
-  { href: "https://github.com/paulogarbo", icon: Github },
-];
+import StatusIndicator from "../../status-indicator";
+import { Button } from "../../ui/button";
+import { MapPin } from "lucide-react";
+import { socialLinks } from "./constants";
 
 const HeroSection = () => {
   return (
