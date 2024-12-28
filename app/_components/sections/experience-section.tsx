@@ -95,7 +95,11 @@ const ExperienceSection = () => {
 
                 <div className="flex flex-wrap gap-2 border-t pt-4">
                   {exp.skills.map((skill, i) => (
-                    <Badge key={i} variant="secondary" className="font-medium">
+                    <Badge
+                      key={i}
+                      variant="secondary"
+                      className="px-3 py-1 font-medium"
+                    >
                       {skill}
                     </Badge>
                   ))}
