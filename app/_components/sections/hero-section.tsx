@@ -1,6 +1,6 @@
-import { Github, Linkedin, MapPin } from "lucide-react";
 import Image from "next/image";
 import StatusIndicator from "../status-indicator";
+import { Github, Linkedin, MapPin } from "lucide-react";
 import { Button } from "../ui/button";
 
 const socialLinks = [
@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className="container mx-auto flex h-[calc(100vh-88px)] min-h-[calc(100vh-88px)] flex-col items-center justify-center px-4"
+      className="container mx-auto flex flex-col items-center justify-center px-4 py-14 md:py-32"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-4">
         <div className="order-2 space-y-12 lg:order-1">
@@ -54,7 +54,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-          <Image src={"/person.png"} alt="Garba" width={700} height={700} />
+          <Image src={"/hero-img.svg"} alt="Garba" width={600} height={600} />
         </div>
       </div>
     </section>
