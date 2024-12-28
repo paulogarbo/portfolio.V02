@@ -20,7 +20,10 @@ const ProjectsSection = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card
+              key={index}
+              className="overflow-hidden hover:shadow-md dark:shadow-zinc-300"
+            >
               <div className="relative h-48 w-full">
                 <Image
                   src={project.image}
