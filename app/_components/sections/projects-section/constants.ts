@@ -7,15 +7,17 @@ export const projects = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Shadcn"],
     liveUrl: "https://portfolio-v02-two.vercel.app/",
     githubUrl: "https://github.com/paulogarbo/portfolio.V02",
+    status: "Finalizado",
   },
   {
-    title: "Em desenvolvimento...",
+    title: "FSW Foods",
     description:
-      "Novo projeto em fase de desenvolvimento. Em breve mais detalhes sobre as tecnologias utilizadas e funcionalidades implementadas.",
-    image: "/projects/primary-project.svg",
-    technologies: ["Em breve"],
+      "Clone do iFood desenvolvido com Next.js 14, TypeScript, TailwindCSS e Shadcn/UI. Este projeto busca replicar as principais funcionalidades de um aplicativo de delivery, como listagem de restaurantes, cardápios dinâmicos e sistema de pedidos, com foco em design moderno e performance otimizada.",
+    image: "/projects/fsw-foods-desk.png",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn/UI"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/paulogarbo/fsw-foods",
+    status: "Em desenvolvimento",
   },
   {
     title: "Em desenvolvimento...",
@@ -25,5 +27,6 @@ export const projects = [
     technologies: ["Em breve"],
     liveUrl: "#",
     githubUrl: "#",
+    status: "Em desenvolvimento",
   },
 ];
