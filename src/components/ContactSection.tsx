@@ -142,19 +142,21 @@ const ContactSection = () => {
                   Vamos conversar! Me conta sua ideia e juntos vamos transformá-la em realidade.
                 </p>
 
-                <motion.a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center gap-3 w-full max-w-md mx-auto px-8 py-5 bg-[rgb(218,255,1)] text-[rgb(17,17,19)] font-bold text-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_40px_rgba(218,255,1,0.4)] hover:-translate-y-1"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent)] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                  <MessageCircle className="w-6 h-6" />
-                  <span>{contactInfo.cta}</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.a>
+                <div className="flex justify-center">
+                  <motion.a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3.5 md:px-8 md:py-4 bg-[rgb(218,255,1)] text-[rgb(17,17,19)] font-bold text-base md:text-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_40px_rgba(218,255,1,0.4)] hover:-translate-y-1"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent)] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                    <MessageCircle className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+                    <span>{contactInfo.cta}</span>
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  </motion.a>
+                </div>
 
                 {/* Alternativas de contato */}
                 <div className="mt-8 pt-6 border-t border-[rgb(63,63,63)]">
